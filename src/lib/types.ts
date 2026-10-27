@@ -35,11 +35,26 @@ export type RSSItem = {
   title: string;
   link: string;
   pubDate?: string;
+  description?: string;
 };
 
 export type RSSResponse = {
   url: string;
+  channelTitle?: string;
   items: RSSItem[];
+  error?: string;
+};
+
+export type BlogPost = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string; // ISO
+  category: string;
+  tags?: string[];
+  readTime: string;
+  featured?: boolean;
+  body: string[]; // paragraphs; simple inline markdown (**bold** supported)
 };
 
 export type ContractRow = {

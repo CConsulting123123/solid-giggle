@@ -4,7 +4,7 @@ import {
   ArrowRight, CheckCircle, Shield, Target, Lightbulb,
   Trophy, Repeat, Rocket, BarChart3, Crown, Phone,
   FileText, Award, ClipboardCheck, TrendingUp, Zap,
-  Users, Building2, Globe, Search, PenTool,
+  Users, Building2, Globe, Search, PenTool, Wrench, BookOpen,
 } from "lucide-react";
 import Section from "../components/Section";
 import Card from "../components/Card";
@@ -36,8 +36,8 @@ const quickLinks = [
   { label: "Find Bids", to: "/information/finding-bids", icon: Search, desc: "RFPs & RFQs" },
   { label: "Certifications", to: "/information/certification-data", icon: Award, desc: "8(a), HUBZone, SDVOSB" },
   { label: "Proposal Help", to: "/information/writing-proposals", icon: PenTool, desc: "Color team method" },
-  { label: "Contract Vehicles", to: "/information/contract-vehicles", icon: FileText, desc: "GSA MAS, OASIS+" },
-  { label: "Search Awards", to: "/information/search-contracts", icon: Globe, desc: "Past award data" },
+  { label: "Free Tools", to: "/tools", icon: Wrench, desc: "Calculators &amp; checklists" },
+  { label: "Blog &amp; News", to: "/blog", icon: BookOpen, desc: "RSS feed articles" },
 ];
 
 const fedMarketData = [
@@ -55,18 +55,18 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>FedGovWin — Professional Federal Contracting Services | GSA Schedule | SBA Certifications | Proposal Writing</title>
+        <title>Government Contracting Information — Learn, Get Certified &amp; Win Federal Contracts</title>
         <meta
           name="description"
-          content="FedGovWin provides expert federal contracting consulting — GSA Schedule applications, SBA certifications, proposal writing, and ongoing contract management. Guaranteed timelines, proven results."
+          content="Free guides, tools and support for small businesses in government contracting. Expedited SBA certifications within 14 days, GSA Schedules submitted in 30 days, proposal writing and capture management."
         />
         <meta
           name="keywords"
-          content="federal contracting consulting, GSA Schedule, GSA MAS application, FAS Catalog Platform, FCP migration, SAM.gov registration, 8(a) certification, SBA certification, government contracting, proposal writing, FedGovWin"
+          content="government contracting, federal contracting for small businesses, SBA certifications 14 days, GSA Schedule 30 days, proposal writing, capture management, SAM.gov registration, 8(a) certification, HUBZone, SDVOSB, WOSB, GSA MAS"
         />
-        <link rel="canonical" href="https://fedgovwin.com/" />
-        <meta property="og:title" content="FedGovWin — Professional Federal Contracting Services" />
-        <meta property="og:description" content="Expert federal contracting consulting — GSA Schedule, certifications, proposal writing, and contract management. Guaranteed timelines." />
+        <link rel="canonical" href="https://govconinformation.com/" />
+        <meta property="og:title" content="Government Contracting Information — Learn, Get Certified & Win Federal Contracts" />
+        <meta property="og:description" content="Free government contracting guides, tools and support. Expedited certifications in 14 days, GSA Schedules in 30 days, proposal writing and capture management." />
         <meta property="og:type" content="website" />
       </Helmet>
 
@@ -87,12 +87,14 @@ export default function Home() {
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1]">
-                Win Federal Contracts.{" "}
-                <span className="gradient-text-hero">Keep Winning.</span>
+                Learn Government Contracting.{" "}
+                <span className="gradient-text-hero">Then Win the Contracts.</span>
               </h1>
 
               <p className="mt-6 text-lg text-slate-300 max-w-xl leading-relaxed">
-                From SAM.gov registration to GSA Schedule awards and winning proposals — {BRAND.fullName} gives you the strategy, tools, and expertise to compete and win in the federal marketplace.
+                Everything small businesses need to compete in the federal marketplace — free guides,
+                tools and support, plus expedited services: certifications within 14 days, GSA Schedules
+                submitted in 30 days, proposal writing and capture management.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -193,18 +195,19 @@ export default function Home() {
             {/* Left — company brief (3 cols) */}
             <div className="lg:col-span-2">
               <div className="accent-line mb-6" />
-              <p className="text-sm font-bold uppercase tracking-wider text-gov-blue">About FedGovWin</p>
+              <p className="text-sm font-bold uppercase tracking-wider text-gov-blue">About Us</p>
               <h2 className="mt-2 font-display text-3xl lg:text-4xl font-bold text-gov-navy">
-                Built for Federal Contractors
+                Built for Small Businesses in Government Contracting
               </h2>
               <p className="mt-5 text-slate-600 leading-relaxed">
-                Based in Tampa, FL — {BRAND.fullName} was founded to help businesses navigate the
-                federal marketplace without the guesswork. We've completed over 7,000 registrations, supported wins up
-                to $640M, and maintain an 87% GSA approval rate.
+                Government Contracting Information exists to cut through the nonsense of federal
+                procurement. We publish the guides, tools and support small businesses need — free —
+                and offer expedited services when you'd rather have it done for you.
               </p>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Our team brings backgrounds in government contracting, technology, and business development. Every
-                engagement is built on our proven 5&nbsp;C's methodology.
+                Our team has completed over 7,000 registrations, supported wins up to $640M, and
+                maintains an 87% GSA and proposal approval rate. Every engagement runs on our
+                proven 5&nbsp;C's methodology.
               </p>
               <Link
                 to="/about/methodology"
@@ -270,10 +273,10 @@ export default function Home() {
             <div className="accent-line mx-auto mb-6" />
             <p className="text-sm font-bold uppercase tracking-wider text-gov-blue">Our Services</p>
             <h2 className="mt-2 font-display text-3xl lg:text-4xl font-bold text-gov-navy">
-              Two Paths. One Goal: Winning.
+              Expedited Government Contracting Services
             </h2>
             <p className="mt-3 text-slate-600 max-w-lg mx-auto">
-              Whether you need a GSA Schedule or a full federal contracting program, we have a clear path for you.
+              Learn for free — or let us execute for you. Every service has a guaranteed timeline and a fixed price.
             </p>
           </div>
 
@@ -427,6 +430,111 @@ export default function Home() {
           <p className="text-center text-sm text-slate-500 mt-8">
             Not sure where to start? <a href={LINKS.booking} target="_blank" rel="noreferrer" className="text-gov-blue font-semibold hover:underline">Book a free consultation</a> and we'll recommend the right path.
           </p>
+        </div>
+      </section>
+
+      {/* ── FREE SUPPORT & TOOLS ── */}
+      <section className="bg-white py-20 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="accent-line mx-auto mb-6" />
+            <p className="text-sm font-bold uppercase tracking-wider text-gov-blue">100% Free</p>
+            <h2 className="mt-2 font-display text-3xl lg:text-4xl font-bold text-gov-navy">
+              Free Tools, Information &amp; Support
+            </h2>
+            <p className="mt-3 text-slate-600 max-w-xl mx-auto">
+              The nonsense-cutters. Everything here is free, no signup, no strings — because
+              informed contractors make better clients.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {/* Tools */}
+            <Link
+              to="/tools"
+              className="group rounded-2xl bg-slate-50 border border-slate-200 p-6 hover:border-gov-blue/30 hover:shadow-lg transition-all"
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gov-blue/10 text-gov-blue group-hover:bg-gov-blue group-hover:text-white transition-colors">
+                <Wrench size={20} />
+              </div>
+              <div className="mt-4 font-bold text-gov-navy">Free Tools &amp; Calculators</div>
+              <p className="mt-1.5 text-sm text-slate-500">
+                Size standard calculator, readiness checklist, certification quiz, and fee estimator.
+              </p>
+            </Link>
+
+            {/* Guides */}
+            <Link
+              to="/information"
+              className="group rounded-2xl bg-slate-50 border border-slate-200 p-6 hover:border-gov-blue/30 hover:shadow-lg transition-all"
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gov-green/10 text-gov-green group-hover:bg-gov-green group-hover:text-white transition-colors">
+                <BookOpen size={20} />
+              </div>
+              <div className="mt-4 font-bold text-gov-navy">Complete Guides Library</div>
+              <p className="mt-1.5 text-sm text-slate-500">
+                SAM.gov, certifications, finding bids, proposals, and contract vehicles — explained plainly.
+              </p>
+            </Link>
+
+            {/* Blog */}
+            <Link
+              to="/blog"
+              className="group rounded-2xl bg-slate-50 border border-slate-200 p-6 hover:border-gov-blue/30 hover:shadow-lg transition-all"
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gov-crimson/10 text-gov-crimson group-hover:bg-gov-crimson group-hover:text-white transition-colors">
+                <TrendingUp size={20} />
+              </div>
+              <div className="mt-4 font-bold text-gov-navy">Blog &amp; Industry News</div>
+              <p className="mt-1.5 text-sm text-slate-500">
+                RSS feed style articles updated continuously, plus live federal newsroom headlines.
+              </p>
+            </Link>
+
+            {/* Contract search */}
+            <Link
+              to="/information/search-contracts"
+              className="group rounded-2xl bg-slate-50 border border-slate-200 p-6 hover:border-gov-blue/30 hover:shadow-lg transition-all"
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gov-navy/10 text-gov-navy group-hover:bg-gov-navy group-hover:text-white transition-colors">
+                <Globe size={20} />
+              </div>
+              <div className="mt-4 font-bold text-gov-navy">Contract Award Search</div>
+              <p className="mt-1.5 text-sm text-slate-500">
+                Search real federal award data by NAICS, state, and set-aside type.
+              </p>
+            </Link>
+
+            {/* Proposal generator */}
+            <Link
+              to="/services/proposal-generator"
+              className="group rounded-2xl bg-slate-50 border border-slate-200 p-6 hover:border-gov-blue/30 hover:shadow-lg transition-all"
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gov-gold/10 text-gov-gold group-hover:bg-gov-gold group-hover:text-white transition-colors">
+                <FileText size={20} />
+              </div>
+              <div className="mt-4 font-bold text-gov-navy">Free Proposal Generator</div>
+              <p className="mt-1.5 text-sm text-slate-500">
+                Generate a branded, capability-based proposal draft in minutes.
+              </p>
+            </Link>
+
+            {/* Free consult */}
+            <a
+              href={LINKS.booking}
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-2xl bg-gov-navy border border-gov-navy p-6 hover:shadow-lg transition-all"
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-gov-gold group-hover:bg-gov-gold group-hover:text-gov-navy transition-colors">
+                <Users size={20} />
+              </div>
+              <div className="mt-4 font-bold text-white">Free 1-on-1 Support</div>
+              <p className="mt-1.5 text-sm text-slate-400">
+                Book a free 30-minute call and ask anything about government contracting. No pitch, no obligation.
+              </p>
+            </a>
+          </div>
         </div>
       </section>
 

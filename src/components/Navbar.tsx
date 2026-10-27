@@ -7,7 +7,7 @@ import {
   Menu, X, ChevronDown, Phone, Mail, MapPin,
   BookOpen, Award, Search, FileText, Truck, Database,
   Shield, Rocket, ClipboardCheck, PenTool,
-  Users, Compass, ArrowRight,
+  Users, Compass, ArrowRight, Rss, Wrench, BadgeCheck, Target,
 } from "lucide-react";
 
 type NavItem = {
@@ -54,17 +54,21 @@ export default function Navbar() {
         label: "Services",
         to: "/services",
         children: [
-          { label: "GSA Schedule Services", to: "/services/gsa-contractors", icon: Shield, desc: "MAS applications from $5,500" },
-          { label: "Federal Contractor Programs", to: "/services/programs", icon: Rocket, desc: "FedStart, Growth & Prime" },
-          { label: "Certifications & Compliance", to: "/services/compliance-capture", icon: ClipboardCheck, desc: "SBA certs & registration mgmt" },
-          { label: "Proposal Writing That Wins", to: "/services/proposal-writing", icon: PenTool, desc: "Shipley method, 87% win rate" },
+          { label: "All Services", to: "/services", icon: Rocket, desc: "Compare everything we do" },
+          { label: "Expedited Certifications", to: "/services/certifications", icon: BadgeCheck, desc: "SBA certs submitted in 14 days" },
+          { label: "GSA Schedule Services", to: "/services/gsa-schedules", icon: Shield, desc: "MAS submitted in 30 days — from $5,500" },
+          { label: "Proposal Writing", to: "/services/proposal-writing", icon: PenTool, desc: "Shipley method, 87% win rate" },
+          { label: "Capture Management", to: "/services/capture-management", icon: Target, desc: "Pipeline building, 18 months early" },
+          { label: "Contractor Programs", to: "/services/programs", icon: ClipboardCheck, desc: "FedStart, Growth & Prime bundles" },
         ],
       },
+      { label: "Free Tools", to: "/tools", icon: Wrench, desc: "Calculators & checklists" },
+      { label: "Blog", to: "/blog", icon: Rss, desc: "RSS feed style articles" },
       {
-        label: "About Us",
+        label: "About",
         to: "/about",
         children: [
-          { label: "About FedGovWin", to: "/about", icon: Users, desc: "Our story & team" },
+          { label: "About Us", to: "/about", icon: Users, desc: "Our story & team" },
           { label: "Our Methodology", to: "/about/methodology", icon: Compass, desc: "The 5 C's framework" },
         ],
       },
@@ -112,12 +116,12 @@ export default function Navbar() {
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 py-3 lg:px-8">
         {/* Logo */}
         <NavLink to="/" className="flex items-center group shrink-0">
-          <span className="font-display leading-none select-none">
-            <span className="text-2xl font-black tracking-tight">
-              <span className="text-gov-navy">Fed</span><span className="text-gov-blue">Gov</span><span className="text-gov-crimson">Win</span>
+          <span className="leading-none select-none">
+            <span className="text-lg font-black tracking-tight">
+              <span className="text-gov-navy">Government Contracting </span><span className="text-gov-blue">Information</span>
             </span>
             <span className="hidden sm:inline ml-2.5 text-[10px] font-bold text-slate-400 uppercase tracking-[0.15em] align-middle">
-              Professional Services
+              Learn. Get Certified. Win.
             </span>
           </span>
         </NavLink>

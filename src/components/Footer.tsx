@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { BRAND, LINKS } from "../lib/constants";
-import { Phone, Mail, MapPin, ArrowUpRight, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowUpRight, ArrowRight, Rss } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -39,16 +39,17 @@ export default function Footer() {
         <div className="grid gap-10 lg:grid-cols-5">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <span className="font-display leading-none select-none">
-              <span className="text-2xl font-black tracking-tight">
-                <span className="text-white">Fed</span><span className="text-gov-sky">Gov</span><span className="text-gov-gold">Win</span>
+            <span className="leading-none select-none block">
+              <span className="text-lg font-black tracking-tight">
+                <span className="text-white">Government Contracting </span><span className="text-gov-sky">Information</span>
               </span>
             </span>
             <div className="mt-1 text-xs text-slate-500 uppercase tracking-wider font-semibold">{BRAND.tagline}</div>
 
             <p className="mt-5 text-sm text-slate-400 leading-relaxed max-w-sm">
-              Expert federal contracting consulting — GSA Schedule applications, SBA certifications,
-              proposal writing, and ongoing contract management. Guaranteed timelines, proven results.
+              Free guides, tools and support for small businesses in government contracting —
+              plus expedited services: SBA certifications in 14 days, GSA Schedules submitted in
+              30 days, proposal writing and capture management.
             </p>
 
             {/* Contact info inline */}
@@ -68,10 +69,12 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Information */}
+          {/* Learn */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">Information</p>
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">Learn</p>
             <div className="grid gap-2.5 text-sm">
+              <Link to="/blog" className="text-slate-300 hover:text-white transition">Blog &amp; News</Link>
+              <Link to="/tools" className="text-slate-300 hover:text-white transition">Free Tools</Link>
               <Link to="/information/sam-dsbs-fema" className="text-slate-300 hover:text-white transition">SAM / DSBS / FEMA</Link>
               <Link to="/information/certification-data" className="text-slate-300 hover:text-white transition">Certification Data</Link>
               <Link to="/information/finding-bids" className="text-slate-300 hover:text-white transition">Finding Government Bids</Link>
@@ -85,10 +88,12 @@ export default function Footer() {
           <div>
             <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">Services</p>
             <div className="grid gap-2.5 text-sm">
-              <Link to="/services/gsa-contractors" className="text-slate-300 hover:text-white transition">GSA Schedule Services</Link>
-              <Link to="/services/programs" className="text-slate-300 hover:text-white transition">Federal Programs</Link>
-              <Link to="/services/compliance-capture" className="text-slate-300 hover:text-white transition">Certifications & Compliance</Link>
+              <Link to="/services" className="text-slate-300 hover:text-white transition">All Services</Link>
+              <Link to="/services/certifications" className="text-slate-300 hover:text-white transition">Expedited Certifications</Link>
+              <Link to="/services/gsa-schedules" className="text-slate-300 hover:text-white transition">GSA Schedule Services</Link>
               <Link to="/services/proposal-writing" className="text-slate-300 hover:text-white transition">Proposal Writing</Link>
+              <Link to="/services/capture-management" className="text-slate-300 hover:text-white transition">Capture Management</Link>
+              <Link to="/services/programs" className="text-slate-300 hover:text-white transition">Contractor Programs</Link>
             </div>
 
             <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3 mt-6">Company</p>
@@ -99,21 +104,30 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Stats */}
+          {/* Stay current */}
           <div>
-            <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">By the Numbers</p>
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">Stay Current</p>
             <div className="space-y-4">
-              {[
-                { value: "7,000+", label: "Registrations" },
-                { value: "$640M", label: "Largest Win" },
-                { value: "87%", label: "GSA Approval Rate" },
-                { value: "15+", label: "Years Experience" },
-              ].map(s => (
-                <div key={s.label}>
-                  <div className="font-display text-lg font-bold text-white">{s.value}</div>
-                  <div className="text-xs text-slate-500">{s.label}</div>
+              <a
+                href="/rss.xml"
+                className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition"
+              >
+                <Rss size={15} className="text-gov-gold" />
+                Subscribe via RSS
+              </a>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Add our feed to any RSS reader and get every new article automatically.
+              </p>
+              <div className="pt-2 space-y-4">
+                <div>
+                  <div className="font-display text-lg font-bold text-white">14 days</div>
+                  <div className="text-xs text-slate-500">Certification guarantee</div>
                 </div>
-              ))}
+                <div>
+                  <div className="font-display text-lg font-bold text-white">30 days</div>
+                  <div className="text-xs text-slate-500">GSA submission guarantee</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

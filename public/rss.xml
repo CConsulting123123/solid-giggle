@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Government Contracting Information</title>
+    <link>https://govconinformation.com/blog</link>
+    <atom:link href="https://govconinformation.com/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Practical guides, market intelligence and industry news for small businesses competing in federal government contracting — SAM.gov, SBA certifications, GSA Schedules, proposals and capture management.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Oct 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>SAM.gov Registration in 2026: The Complete Small Business Guide</title>
+      <link>https://govconinformation.com/blog/sam-registration-2026-guide</link>
+      <guid isPermaLink="true">https://govconinformation.com/blog/sam-registration-2026-guide</guid>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Getting Started</category>
+      <description>Entity validation, UEI numbers, CAGE codes and annual renewals — everything a small business needs to register on SAM.gov the right way the first time.</description>
+    </item>
+
+    <item>
+      <title>8(a) vs HUBZone vs SDVOSB vs WOSB: Which Certification Should Your Small Business Pursue?</title>
+      <link>https://govconinformation.com/blog/8a-vs-hubzone-vs-sdvosb</link>
+      <guid isPermaLink="true">https://govconinformation.com/blog/8a-vs-hubzone-vs-sdvosb</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Certifications</category>
+      <description>Each SBA certification unlocks a different slice of set-aside spending. Here is how to match your ownership profile and location to the highest-value certification.</description>
+    </item>
+
+    <item>
+      <title>Is a GSA Schedule Worth It for a Small Business? An Honest Analysis</title>
+      <link>https://govconinformation.com/blog/gsa-schedule-worth-it</link>
+      <guid isPermaLink="true">https://govconinformation.com/blog/gsa-schedule-worth-it</guid>
+      <pubDate>Mon, 06 Oct 2026 00:00:00 GMT</pubDate>
+      <category>GSA Schedules</category>
+      <description>A GSA Schedule is a $50B+ buying channel — but it is also a multi-month commitment with real costs. Here's the math on when it pays off and when it doesn't.</description>
+    </item>
+
+    <item>
+      <title>Sources Sought Responses: How to Shape a Contract Before It Exists</title>
+      <link>https://govconinformation.com/blog/sources-sought-respond</link>
+      <guid isPermaLink="true">https://govconinformation.com/blog/sources-sought-respond</guid>
+      <pubDate>Mon, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <category>Capture Management</category>
+      <description>The Sources Sought notice is your earliest — and cheapest — chance to influence a solicitation. Most small businesses ignore it. Here's how to write a response that moves the needle.</description>
+    </item>
+
+    <item>
+      <title>The Proposal Compliance Matrix: The Document That Prevents Auto-Elimination</title>
+      <link>https://govconinformation.com/blog/proposal-compliance-matrix</link>
+      <guid isPermaLink="true">https://govconinformation.com/blog/proposal-compliance-matrix</guid>
+      <pubDate>Mon, 22 Sep 2026 00:00:00 GMT</pubDate>
+      <category>Proposals</category>
+      <description>Before you write a word of your proposal, build a compliance matrix. This one document is the difference between a scored proposal and a rejected one.</description>
+    </item>
+
+    <item>
+      <title>NAICS Code Selection: The Quiet Decision That Determines Your Entire Federal Market</title>
+      <link>https://govconinformation.com/blog/naics-code-selection</link>
+      <guid isPermaLink="true">https://govconinformation.com/blog/naics-code-selection</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <category>Getting Started</category>
+      <description>Your NAICS codes decide which size standard applies to you, which set-asides you qualify for, and which opportunities you ever see. Here's how to choose well.</description>
+    </item>
+
+    <item>
+      <title>The Capability Statement That Actually Gets Responses</title>
+      <link>https://govconinformation.com/blog/capability-statement-that-works</link>
+      <guid isPermaLink="true">https://govconinformation.com/blog/capability-statement-that-works</guid>
+      <pubDate>Mon, 08 Sep 2026 00:00:00 GMT</pubDate>
+      <category>Marketing</category>
+      <description>Most capability statements are brochures. Contracting officers need a one-page decision document. Here is the structure that gets you on their vendor lists.</description>
+    </item>
+
+    <item>
+      <title>Teaming Agreements for Small Businesses: How to Bid on Contracts You Can't Win Alone</title>
+      <link>https://govconinformation.com/blog/teaming-agreements-primer</link>
+      <guid isPermaLink="true">https://govconinformation.com/blog/teaming-agreements-primer</guid>
+      <pubDate>Mon, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <category>Capture Management</category>
+      <description>Teaming lets a small business combine capabilities with a larger partner to bid work neither could win alone. Here's how the structures work and what to watch for.</description>
+    </item>
+
+    <item>
+      <title>The Federal Budget Cycle: When Contracts Actually Get Awarded</title>
+      <link>https://govconinformation.com/blog/federal-budget-cycle-bidding</link>
+      <guid isPermaLink="true">https://govconinformation.com/blog/federal-budget-cycle-bidding</guid>
+      <pubDate>Mon, 25 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Getting Started</category>
+      <description>Federal buying has a rhythm driven by the fiscal year. Knowing when money gets appropriated, obligated and expires tells you when to be ready.</description>
+    </item>
+
+    <item>
+      <title>Set-Asides, Simplified: How Small Businesses Get a Head Start on Federal Contracts</title>
+      <link>https://govconinformation.com/blog/set-aside-types-explained</link>
+      <guid isPermaLink="true">https://govconinformation.com/blog/set-aside-types-explained</guid>
+      <pubDate>Mon, 18 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Certifications</category>
+      <description>Total small business set-asides, partial set-asides, 8(a) sole-source, HUBZone, SDVOSB, WOSB — what each means and how to know which ones you qualify for.</description>
+    </item>
+  </channel>
+</rss>
