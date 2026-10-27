@@ -1,10 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ExternalLink, CheckCircle, AlertCircle, ArrowRight } from "lucide-react";
+import { ExternalLink, CheckCircle, AlertCircle, ArrowRight, Clock, FileCheck, Building2, UserCheck } from "lucide-react";
 import Section from "../../components/Section";
 import Card from "../../components/Card";
 import { LinkButton } from "../../components/Button";
-import { LINKS } from "../../lib/constants";
+import { BRAND, LINKS } from "../../lib/constants";
 
 const samResources = [
   { title: "SAM.gov Main Portal", url: "https://sam.gov", desc: "Official federal contractor registration" },
@@ -22,8 +22,8 @@ export default function InformationSAM() {
   return (
     <>
       <Helmet>
-        <title>SAM, DSBS & FEMA Registration — FedGovWin Professional Services</title>
-      </Helmet>
+        <title>SAM, DSBS & FEMA Registration — Government Contracting Information</title>        <meta name="description" content="Step-by-step SAM.gov registration guide for small businesses: UEI, CAGE code, DSBS profile, FEMA vendor registration — plus the mistakes that get registrations rejected." />
+        <link rel="canonical" href={`https://${BRAND.domain}/information/sam-dsbs-fema`} />      </Helmet>
 
       {/* Hero */}
       <section className="bg-white">
@@ -106,6 +106,95 @@ export default function InformationSAM() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Registration Walkthrough */}
+      <section className="bg-white py-16">
+        <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
+          <p className="text-sm font-bold uppercase tracking-wider text-gov-blue">Step by Step</p>
+          <h2 className="mt-3 font-display text-2xl font-bold text-gov-navy">
+            The Registration Process, In Order
+          </h2>
+          <p className="mt-3 text-slate-600 max-w-2xl">
+            Most rejections come from doing these steps out of order. Follow the sequence.
+          </p>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-5">
+            {[
+              {
+                step: "1",
+                icon: Building2,
+                title: "Entity First",
+                time: "Week 1",
+                desc: "Form your legal entity (LLC/Corp) and get your EIN from the IRS. SAM matches your legal business name exactly — no DBAs, no variations.",
+              },
+              {
+                step: "2",
+                icon: UserCheck,
+                title: "UEI & Login.gov",
+                time: "Day 1",
+                desc: "Create a Login.gov account, then request your Unique Entity ID (UEI — it replaced DUNS). Validation against IRS records takes 1-2 business days.",
+              },
+              {
+                step: "3",
+                icon: FileCheck,
+                title: "Complete the Record",
+                time: "1-2 hours",
+                desc: "Enter core data: entity info, business size & NAICS codes, banking (for payment), and point of contact. Small business assertions feed DSBS.",
+              },
+              {
+                step: "4",
+                icon: Clock,
+                title: "CAGE Assignment",
+                time: "2-5 days",
+                desc: "The Defense Logistics Agency issues your CAGE code after review. This is where most delays and rejections happen — watch for the follow-up email.",
+              },
+              {
+                step: "5",
+                icon: CheckCircle,
+                title: "Assertions & Renewal",
+                time: "Ongoing",
+                desc: "Add set-aside eligibility (8(a), HUBZone, etc.), keep the record updated within 30 days of changes, and renew annually — expiration kills eligibility instantly.",
+              },
+            ].map((s) => {
+              const Icon = s.icon;
+              return (
+                <Card key={s.step} className="p-5" hover={true}>
+                  <div className="flex items-center justify-between">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gov-blue/10 text-gov-blue font-bold text-sm">
+                      {s.step}
+                    </div>
+                    <Icon size={18} className="text-slate-300" />
+                  </div>
+                  <h3 className="mt-3 font-semibold text-gov-navy text-sm">{s.title}</h3>
+                  <p className="mt-1 text-xs text-gov-blue font-semibold">{s.time}</p>
+                  <p className="mt-2 text-xs text-slate-600 leading-relaxed">{s.desc}</p>
+                </Card>
+              );
+            })}
+          </div>
+
+          {/* Common mistakes callout */}
+          <Card className="mt-8 p-6 border-l-4 border-l-gov-crimson" hover={false}>
+            <h3 className="font-semibold text-gov-navy flex items-center gap-2">
+              <AlertCircle size={18} className="text-gov-crimson" />
+              The 4 mistakes that get registrations rejected
+            </h3>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              {[
+                "Legal name doesn't match IRS records exactly",
+                "Using a virtual/PO box address instead of a physical one",
+                "NAICS codes listed as primary that don't match your actual business",
+                "Letting registration lapse — even 1 day expired blocks all bidding",
+              ].map((m) => (
+                <div key={m} className="flex items-start gap-2 text-sm text-slate-600">
+                  <span className="text-gov-crimson font-bold shrink-0">✗</span>
+                  {m}
+                </div>
+              ))}
+            </div>
+          </Card>
         </div>
       </section>
 

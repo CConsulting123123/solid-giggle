@@ -92,7 +92,7 @@ export const SERVICES = [
       "SIN selection and market pricing research",
       "Full MAS application and eOffer submission",
       "30-day submission guarantee",
-      "87% historical approval rate",
+      "98% historical approval rate",
     ],
   },
   {
@@ -108,7 +108,7 @@ export const SERVICES = [
       "RFP analysis and compliance matrix",
       "Win theme development",
       "Full color-team review cycle",
-      "87% historical win rate",
+      "Shipley-method proposal development",
     ],
   },
   {
@@ -190,6 +190,6 @@ export const MARKET_STATS = [
 export const TRUST_STATS = [
   { value: "7,000+", label: "Registrations completed", icon: "clipboard" },
   { value: "$640M", label: "Largest win supported", icon: "trending" },
-  { value: "87%", label: "GSA & proposal approval rate", icon: "award" },
+  { value: "98%", label: "Application approval rate", icon: "award" },
   { value: "100%", label: "On-time submission guarantee", icon: "zap" },
 ];

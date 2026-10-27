@@ -437,7 +437,7 @@ function EligibilityQuiz() {
 
   const QUESTIONS: { key: keyof typeof answers; label: string }[] = [
     { key: "disadvantaged", label: "Owner(s) are members of a group SBA presumes socially disadvantaged (or can document individual disadvantage)" },
-    { key: "lowIncome", label: "Personal net worth under $850K, AGI under $400K avg 3 yrs, assets under $4M (excl. home/business equity)" },
+    { key: "lowIncome", label: "Personal net worth under $850K, AGI under $400K avg 3 yrs, assets under $6.5M (excl. qualified retirement accounts)" },
     { key: "hubzoneLocation", label: "Principal office is located in a designated HUBZone" },
     { key: "employeeResidency", label: "At least 35% of employees live in a HUBZone" },
     { key: "veteran", label: "A service-disabled veteran owns 51% and controls daily operations" },

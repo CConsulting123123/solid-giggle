@@ -40,7 +40,7 @@ const CORE_SERVICES = [
       "SIN selection and pricing research",
       "Full MAS application and eOffer",
       "30-day submission guarantee",
-      "87% historical approval rate",
+      "98% historical approval rate",
     ],
   },
   {
@@ -56,7 +56,7 @@ const CORE_SERVICES = [
       "RFP analysis and compliance matrix",
       "Win theme development",
       "Full color team review cycle",
-      "87% historical win rate",
+      "Shipley-method proposal development",
     ],
   },
   {

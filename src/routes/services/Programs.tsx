@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import {
   ArrowRight, CheckCircle, Rocket, BarChart3, Crown,
-  ChevronDown, Shield, Check, Lightbulb, Trophy, Repeat,
+  ChevronDown, Shield, Check, Globe, Trophy, Repeat,
   Target, Phone, X,
 } from "lucide-react";
 import { cn } from "../../components/cn";
@@ -215,16 +215,16 @@ const comparisonRows = [
 
 const fiveCs = [
   { num: "1", name: "Compliance", desc: "Registrations, certifications & eligibility — the foundation.", icon: Shield, color: "text-blue-600" },
-  { num: "2", name: "Concept", desc: "Strategy, positioning & marketing materials — the plan.", icon: Lightbulb, color: "text-emerald-600" },
+  { num: "2", name: "Context", desc: "Market data, positioning & marketing materials — the plan.", icon: Globe, color: "text-emerald-600" },
   { num: "3", name: "Capture", desc: "Finding & qualifying opportunities — the pipeline.", icon: Target, color: "text-rose-600" },
   { num: "4", name: "Compete", desc: "Proposals, pricing & reviews — the win.", icon: Trophy, color: "text-amber-600" },
-  { num: "5", name: "Continue", desc: "Performance, renewals & growth — the future.", icon: Repeat, color: "text-purple-600" },
+  { num: "5", name: "Continuity", desc: "Performance, renewals & growth — the future.", icon: Repeat, color: "text-purple-600" },
 ];
 
 const stats = [
   { value: "200+", label: "Contractors Launched" },
-  { value: "87%", label: "Client Win Rate" },
   { value: "$109M+", label: "Awards Facilitated" },
+  { value: "98%", label: "Application Approval Rate" },
   { value: "14 Days", label: "Cert Turnaround" },
 ];
 
@@ -238,7 +238,7 @@ export default function Programs() {
   return (
     <>
       <Helmet>
-        <title>Federal Contractor Programs — FedGovWin Professional Services</title>
+        <title>Federal Contractor Programs — Government Contracting Information</title>
         <meta name="description" content="Win federal contracts with our proven 5 C's methodology. FedStart ($3,200), Growth ($6,500), and Prime ($15,500) — clear deliverables, guaranteed timelines." />
       </Helmet>
 

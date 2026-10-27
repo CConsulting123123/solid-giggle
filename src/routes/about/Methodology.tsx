@@ -1,64 +1,87 @@
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Shield, Target, Link2, Briefcase, RefreshCw } from "lucide-react";
+import { ArrowRight, Shield, Globe2, Target, Trophy, Repeat, RefreshCw } from "lucide-react";
 import Section from "../../components/Section";
 import Card from "../../components/Card";
 import { LinkButton } from "../../components/Button";
-import { LINKS } from "../../lib/constants";
+import { BRAND, LINKS } from "../../lib/constants";
 import { cn } from "../../components/cn";
 
-const fourCs = [
+const fiveCs = [
   {
     id: "compliance",
     label: "Compliance",
     icon: Shield,
     color: "bg-emerald-600",
-    description: "The Foundation. We ensure you are legal, registered, and set aside-ready.",
+    description: "The foundation. Get registered, certified, and set-aside-ready — legally and completely.",
+    detail:
+      "Before you can compete, the government has to be able to buy from you. We build the foundation first: a clean SAM.gov registration, DSBS and FEMA vendor profiles, and the SBA certifications that unlock set-asides.",
     tasks: [
-      { name: "Kickoff Consultation", type: "Strategy" },
-      { name: "SAM.gov Registration", type: "Processing" },
-      { name: "DSBS & FEMA Profiles", type: "Processing" },
-      { name: "SBA Certification Check", type: "Strategy" },
+      { name: "SAM.gov Registration (UEI + CAGE)", type: "Registration" },
+      { name: "DSBS & FEMA Vendor Profiles", type: "Registration" },
+      { name: "8(a), HUBZone, SDVOSB, WOSB Applications", type: "Certification" },
+      { name: "Rejection Recovery & Renewals", type: "Certification" },
+    ],
+  },
+  {
+    id: "context",
+    label: "Context",
+    icon: Globe2,
+    color: "bg-gov-blue",
+    description: "Know the landscape. Understand who buys what you sell, where the money goes, and who you're up against.",
+    detail:
+      "Blind bidding burns budget. We use real award data — agency spending patterns, incumbent contracts, set-aside utilization — to identify where your company can actually win.",
+    tasks: [
+      { name: "Capabilities Statement Design", type: "Marketing" },
+      { name: "Agency & Spend Analysis", type: "Data" },
+      { name: "Contract Award Research", type: "Data" },
+      { name: "Competitor & Incumbent Analysis", type: "Data" },
     ],
   },
   {
     id: "capture",
     label: "Capture",
     icon: Target,
-    color: "bg-gov-blue",
-    description: "The Hunt. Identifying the right opportunities before they hit the street.",
-    tasks: [
-      { name: "Capability Statement Design", type: "Marketing" },
-      { name: "Pipeline Construction", type: "Strategy" },
-      { name: "Competitor Analysis", type: "Data" },
-      { name: "Agency Forecasting", type: "Strategy" },
-    ],
-  },
-  {
-    id: "connect",
-    label: "Connect",
-    icon: Link2,
-    color: "bg-indigo-600",
-    description: "The Pitch. Putting your solution in front of the decision makers.",
-    tasks: [
-      { name: "Proposal Development", type: "Writing" },
-      { name: "Past Performance Formatting", type: "Writing" },
-      { name: "Marketing Outreach", type: "Marketing" },
-      { name: "Contracting Officer Intros", type: "Sales" },
-    ],
-  },
-  {
-    id: "consulting",
-    label: "Consulting",
-    icon: Briefcase,
     color: "bg-gov-crimson",
-    description: "The Growth. Scaling your operations and managing complex vehicles.",
+    description: "The hunt. Identify and shape opportunities 6–18 months before the RFP hits the street.",
+    detail:
+      "By the time an RFP is public, the winning contractor is often already known. Capture means finding opportunities early, meeting the right program managers, and positioning through Sources Sought and industry days.",
     tasks: [
-      { name: "GSA Schedule Management", type: "Admin" },
-      { name: "Project Liftoff Support", type: "Ops" },
-      { name: "Quarterly Reviews", type: "Strategy" },
-      { name: "Compliance Audits", type: "Legal" },
+      { name: "Pipeline Construction & Qualification", type: "Strategy" },
+      { name: "Sources Sought Monitoring & Response", type: "Strategy" },
+      { name: "Agency Relationship Building", type: "Outreach" },
+      { name: "Teaming & Subcontract Strategy", type: "Strategy" },
+    ],
+  },
+  {
+    id: "compete",
+    label: "Compete",
+    icon: Trophy,
+    color: "bg-amber-600",
+    description: "Win the work. Proposals engineered for evaluation — not just written.",
+    detail:
+      "Every proposal is built around a compliance matrix and win themes, then pressure-tested through color team reviews — the same method used by the top federal proposal shops.",
+    tasks: [
+      { name: "Compliance Matrix & Win Themes", type: "Proposal" },
+      { name: "Blue / Pink / Red / Gold Team Reviews", type: "Proposal" },
+      { name: "Technical, Management & Pricing Volumes", type: "Proposal" },
+      { name: "Past Performance & PPQ Formatting", type: "Proposal" },
+    ],
+  },
+  {
+    id: "continuity",
+    label: "Continuity",
+    icon: Repeat,
+    color: "bg-indigo-600",
+    description: "Scale and repeat. Perform, stay compliant, renew vehicles, and compound your wins.",
+    detail:
+      "Winning once is a start. We keep registrations and certifications current, manage your GSA Schedule, and expand across vehicles so year two is bigger than year one.",
+    tasks: [
+      { name: "GSA Schedule & Contract Management", type: "Admin" },
+      { name: "Registration & Certification Renewals", type: "Admin" },
+      { name: "Win/Loss Debrief Analysis", type: "Strategy" },
+      { name: "Growth Planning & Vehicle Expansion", type: "Strategy" },
     ],
   },
 ];
@@ -74,13 +97,15 @@ export default function AboutMethodology() {
   const [activeC, setActiveC] = useState("compliance");
   const [activePDCA, setActivePDCA] = useState("plan");
 
-  const currentC = fourCs.find((c) => c.id === activeC);
+  const currentC = fiveCs.find((c) => c.id === activeC);
   const currentPDCA = pdca.find((p) => p.key === activePDCA);
 
   return (
     <>
-      <Helmet>
-        <title>Methodology — FedGovWin Professional Services</title>
+            <Helmet>
+        <title>Our Methodology — The 5 C's Framework | {BRAND.fullName}</title>
+        <meta name="description" content="The 5 C's methodology: Compliance, Context, Capture, Compete, Continuity — how small businesses win federal contracts. Free guides plus expedited certification, GSA, proposal and capture services." />
+        <link rel="canonical" href={`https://${BRAND.domain}/about/methodology`} />
       </Helmet>
 
       {/* Hero */}
@@ -92,26 +117,28 @@ export default function AboutMethodology() {
               Our Methodology
             </h1>
             <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-              We don't do "consulting theater." Our frameworks are built from real outcomes, 
-              refined over thousands of engagements, and designed for one thing: winning.
+              We don't do "consulting theater." The 5 C's framework is built from real outcomes across
+              thousands of engagements — and it's the same process behind every free guide, tool, and
+              expedited service we offer.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 4 C's Framework */}
+      {/* 5 C's Framework */}
       <section className="bg-slate-50 py-16">
         <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
           <p className="text-sm font-bold uppercase tracking-wider text-gov-blue">Framework</p>
-          <h2 className="mt-3 font-display text-2xl font-bold text-gov-navy">The 4 C's</h2>
+          <h2 className="mt-3 font-display text-2xl font-bold text-gov-navy">The 5 C's of Federal Contracting</h2>
           <p className="mt-4 text-slate-600 max-w-2xl">
-            Our proprietary framework covers every phase of government contracting success.
+            Most businesses jump straight to bidding. Winners start at the foundation. Our 5 C's framework
+            covers every phase of government contracting — in the order that actually produces wins.
           </p>
 
           <div className="mt-10">
             {/* Tabs */}
             <div className="flex border-b border-slate-200 overflow-x-auto">
-              {fourCs.map((c) => {
+              {fiveCs.map((c) => {
                 const isActive = activeC === c.id;
                 return (
                   <button
@@ -155,6 +182,7 @@ export default function AboutMethodology() {
                     <div>
                       <h3 className="font-display text-2xl font-bold text-gov-navy">{currentC?.label}</h3>
                       <p className="mt-3 text-lg text-slate-600">{currentC?.description}</p>
+                      <p className="mt-3 text-sm text-slate-500 leading-relaxed">{currentC?.detail}</p>
                       <div className="mt-6 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-xs font-semibold text-slate-600">
                         <span className={cn("h-2 w-2 rounded-full", currentC?.color)} />
                         Phase Priority: High
@@ -253,8 +281,9 @@ export default function AboutMethodology() {
                 Let's apply this to your business
               </h3>
               <p className="mt-3 text-slate-300 max-w-xl">
-                Book a call and we'll walk through where you are in the 4 C's and 
-                build a plan to move you forward.
+                Book a call and we'll walk through where you sit in the 5 C's — and
+                build a plan to move you forward, whether you do it yourself with our free
+                guides or have us execute for you.
               </p>
             </div>
             <LinkButton 

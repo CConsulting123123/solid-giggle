@@ -32,7 +32,7 @@ import {
 import Section from "../../components/Section";
 import Card from "../../components/Card";
 import { LinkButton } from "../../components/Button";
-import { LINKS } from "../../lib/constants";
+import { BRAND, LINKS } from "../../lib/constants";
 import { cn } from "../../components/cn";
 
 // ============================================
@@ -135,29 +135,29 @@ const gsaBenefits = [
     title: "Pre-Vetted Credibility",
     desc: "Agencies trust GSA contractors—you've already passed rigorous government scrutiny",
     icon: BadgeCheck,
-    stat: "80%",
-    statLabel: "of agencies prefer GSA"
+    stat: "Pre-vetted",
+    statLabel: "by GSA before agencies buy"
   },
   {
     title: "Streamlined Procurement",
     desc: "Agencies can buy from you in days, not months—no lengthy competitive bidding",
     icon: Zap,
-    stat: "90%",
-    statLabel: "faster procurement"
+    stat: "Days",
+    statLabel: "instead of months to order"
   },
   {
     title: "Massive Buying Pool",
-    desc: "Access to $50B+ annual federal spending through GSA vehicles",
+    desc: "Access to tens of billions in annual federal spending through GSA vehicles",
     icon: DollarSign,
-    stat: "$50B+",
-    statLabel: "annual spend"
+    stat: "$40B+",
+    statLabel: "annual MAS sales"
   },
   {
     title: "Reduced Competition",
-    desc: "Compete against 1,000s instead of 100,000s—only GSA contractors can bid",
+    desc: "Compete only against other Schedule holders—many agency orders skip open competition entirely",
     icon: Target,
-    stat: "10X",
-    statLabel: "less competition"
+    stat: "Vehicle-only",
+    statLabel: "competitor pool"
   },
   {
     title: "20-Year Contract",
@@ -315,7 +315,7 @@ export default function ServicesGSA() {
   return (
     <>
       <Helmet>
-        <title>GSA Schedule Services — FedGovWin Professional Services</title>
+        <title>GSA Schedule Services — Government Contracting Information</title>
         <meta name="description" content="New to GSA? We submit your GSA Schedule application in 30 days — $5,500 Essentials or $9,000 Full-Service with a year of support. Catalog Platform upload + 3-month training for $999." />
       </Helmet>
 
@@ -1279,7 +1279,7 @@ export default function ServicesGSA() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-400 uppercase">Email</div>
-                    <div className="text-white font-semibold">Info@FedGovWin.com</div>
+                    <div className="text-white font-semibold">{BRAND.email}</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

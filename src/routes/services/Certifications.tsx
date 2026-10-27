@@ -20,7 +20,7 @@ const CERTS = [
       "9-year developmental program with SBA mentoring",
       "Mentor-protégé joint ventures with large primes",
     ],
-    eligibility: "Socially + economically disadvantaged ownership; net worth under $850K, AGI under $400K, assets under $4M",
+    eligibility: "Socially + economically disadvantaged ownership; net worth under $850K, AGI under $400K, assets under $6.5M",
     difficulty: "Demanding",
   },
   {

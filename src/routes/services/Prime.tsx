@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { cn } from "../../components/cn";
 import { LinkButton } from "../../components/Button";
-import { LINKS } from "../../lib/constants";
+import { BRAND, LINKS } from "../../lib/constants";
 
 // ============================================
 // PRIME PROGRAM PAGE
@@ -195,10 +195,10 @@ const timeline = [
 
 const fiveCsCoverage = [
   { c: 'Compliance', level: 'Full + Managed', covered: true, desc: 'All registrations plus year-round maintenance and renewals' },
-  { c: 'Concept', level: 'Full + Ongoing', covered: true, desc: 'Capabilities statement, strategy, and quarterly campaigns' },
+  { c: 'Context', level: 'Full + Ongoing', covered: true, desc: 'Capabilities statement, strategy, and quarterly campaigns' },
   { c: 'Capture', level: 'Dedicated', covered: true, desc: 'Named capture manager with 30-50 opportunity pipeline' },
   { c: 'Compete', level: 'Full Proposals', covered: true, desc: 'Up to 5 complete proposal developments + unlimited reviews' },
-  { c: 'Continue', level: 'Full', covered: true, desc: 'Quarterly business reviews, compliance management, recompete positioning' },
+  { c: 'Continuity', level: 'Full', covered: true, desc: 'Quarterly business reviews, compliance management, recompete positioning' },
 ];
 
 const whyPrime = [
@@ -275,7 +275,7 @@ export default function PrimeProgram() {
   return (
     <>
       <Helmet>
-        <title>Prime Program — Full-Service Federal Partnership | FedGovWin Professional Services</title>
+        <title>Prime Program — Full-Service Federal Partnership | Government Contracting Information</title>
         <meta name="description" content="Dedicated capture management, 5 full proposals, quarterly campaigns, and year-round compliance. The complete federal contracting partnership. $15,500." />
       </Helmet>
 
@@ -291,7 +291,7 @@ export default function PrimeProgram() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/20 text-sm text-amber-200 mb-6 border border-amber-400/30">
                 <Crown size={16} />
-                Marketing Program
+                12-Month Partnership Program
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
@@ -310,7 +310,7 @@ export default function PrimeProgram() {
                   <div className="text-5xl font-bold text-white">$15,500</div>
                   <div className="text-amber-300">12 Month Program</div>
                 </div>
-                <LinkButton href="/register" className="px-8 py-4 bg-white text-amber-900 hover:bg-amber-50 text-lg">
+                <LinkButton href={LINKS.booking} target="_blank" rel="noreferrer" className="px-8 py-4 bg-white text-amber-900 hover:bg-amber-50 text-lg">
                   Get Started
                   <ArrowRight size={20} className="ml-2" />
                 </LinkButton>
@@ -664,7 +664,7 @@ export default function PrimeProgram() {
           <p className="mt-4 text-xl text-amber-200">Dedicated support, full proposals, year-round success.</p>
           
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <LinkButton href="/register" className="px-10 py-4 bg-white text-amber-900 hover:bg-amber-50 text-lg">
+            <LinkButton href={LINKS.booking} target="_blank" rel="noreferrer" className="px-10 py-4 bg-white text-amber-900 hover:bg-amber-50 text-lg">
               Start Prime — $15,500
               <ArrowRight size={20} className="ml-2" />
             </LinkButton>
@@ -678,9 +678,9 @@ export default function PrimeProgram() {
               <Phone size={18} />
               (813) 665-0308
             </a>
-            <a href="mailto:Info@FedGovWin.com" className="flex items-center gap-2 hover:text-white transition">
+            <a href={`mailto:${BRAND.email}`} className="flex items-center gap-2 hover:text-white transition">
               <Mail size={18} />
-              Info@FedGovWin.com
+              {BRAND.email}
             </a>
           </div>
         </div>

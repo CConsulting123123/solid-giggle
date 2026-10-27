@@ -17,13 +17,14 @@ const certifications = [
     requirements: [
       "Business must be small (size standard depends on industry)",
       "Applicant(s) must be U.S. citizen(s)",
-      "Personal net worth under $250,000 (excluding home)",
-      "Adjusted gross income averaged over 2 years under $65,000",
+      "Personal net worth under $850,000 (excluding home & business equity)",
+      "Adjusted gross income averaged over 3 years under $400,000",
+      "Total assets under $6.5 million (excluding qualified retirement accounts)",
       "3 years of business management/ownership experience",
       "Demonstrate potential for success",
     ],
-    marketSize: "$183.5B in awards",
-    achievement: "28.76% of small business awards",
+    marketSize: "$78.3B in awards",
+    achievement: "12.27% of eligible contract dollars",
   },
   {
     name: "HUBZone",
@@ -125,7 +126,7 @@ export default function InformationCertification() {
   return (
     <>
       <Helmet>
-        <title>Certification Data — FedGovWin Professional Services</title>
+        <title>Certification Data — Government Contracting Information</title>
       </Helmet>
 
       {/* Hero */}

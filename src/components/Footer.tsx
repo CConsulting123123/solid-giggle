@@ -141,8 +141,8 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} {BRAND.fullName}. All rights reserved.
             </div>
             <div className="flex gap-6 text-xs text-slate-500">
-              <a href="#" className="hover:text-slate-300 transition">Privacy Policy</a>
-              <a href="#" className="hover:text-slate-300 transition">Terms of Service</a>
+              <Link to="/privacy" className="hover:text-slate-300 transition">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-slate-300 transition">Terms of Service</Link>
             </div>
           </div>
         </div>

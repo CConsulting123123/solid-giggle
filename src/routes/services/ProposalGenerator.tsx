@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { cn } from "../../components/cn";
 import { LinkButton } from "../../components/Button";
+import { BRAND } from "../../lib/constants";
 
 // ============================================
 // TYPES
@@ -645,8 +646,8 @@ export default function ProposalGenerator() {
         <div class="proposal-container">
           <div class="header">
             <div>
-              <div class="company-name">FedGovWin</div>
-              <div class="company-tagline">Federal Contractor Consulting</div>
+              <div class="company-name">${BRAND.fullName}</div>
+              <div class="company-tagline">Learn. Get Certified. Win Contracts.</div>
             </div>
             <div class="proposal-label">
               <div class="proposal-title">Service Proposal</div>
@@ -667,7 +668,7 @@ export default function ProposalGenerator() {
           </div>
           
           <div class="intro-text">
-            Thank you for the opportunity to provide this proposal. FedGovWin is committed to helping your company succeed in the federal marketplace. The following outlines our recommended services based on your business objectives.
+            Thank you for the opportunity to provide this proposal. ${BRAND.fullName} is committed to helping your company succeed in the federal marketplace. The following outlines our recommended services based on your business objectives.
           </div>
           
           <div class="services-section">
@@ -744,7 +745,7 @@ export default function ProposalGenerator() {
               <div class="signature-title">${proposalData.client.companyName}</div>
             </div>
             <div class="signature-block">
-              <div class="signature-label">FedGovWin</div>
+              <div class="signature-label">${BRAND.fullName}</div>
               <div class="signature-line"></div>
               <div class="signature-name">Don Sean</div>
               <div class="signature-title">Principal Consultant</div>
@@ -754,7 +755,7 @@ export default function ProposalGenerator() {
           <div class="footer">
             <div class="footer-text">This proposal is confidential and intended solely for the named recipient.</div>
             <div class="footer-contact">
-              FedGovWin • (813) 665-0308 • Info@FedGovWin.com • www.FedGovWin.com
+              ${BRAND.fullName} • ${BRAND.phone} • ${BRAND.email} • www.${BRAND.domain}
             </div>
           </div>
         </div>
@@ -774,7 +775,7 @@ export default function ProposalGenerator() {
   return (
     <>
       <Helmet>
-        <title>Proposal Generator — FedGovWin Professional Services</title>
+        <title>Proposal Generator — {BRAND.fullName}</title>
         <meta name="description" content="Generate professional service proposals for federal contracting clients." />
       </Helmet>
 
@@ -1373,8 +1374,8 @@ export default function ProposalGenerator() {
                 {/* Preview content mimics PDF */}
                 <div className="flex justify-between items-start mb-10 pb-8 border-b-4 border-slate-900">
                   <div>
-                    <h1 className="text-4xl font-bold text-slate-900 tracking-tight">FedGovWin</h1>
-                    <p className="text-slate-500 mt-1">Federal Contractor Consulting</p>
+                    <h1 className="text-2xl font-bold text-slate-900 tracking-tight">{BRAND.fullName}</h1>
+                    <p className="text-slate-500 mt-1">Learn. Get Certified. Win Contracts.</p>
                   </div>
                   <div className="text-right">
                     <div className="text-sm font-bold text-red-600 uppercase tracking-wider">Service Proposal</div>
@@ -1393,7 +1394,7 @@ export default function ProposalGenerator() {
                 </div>
 
                 <p className="text-slate-600 mb-10 leading-relaxed">
-                  Thank you for the opportunity to provide this proposal. FedGovWin is committed to helping your company succeed in the federal marketplace. The following outlines our recommended services based on your business objectives.
+                  Thank you for the opportunity to provide this proposal. {BRAND.fullName} is committed to helping your company succeed in the federal marketplace. The following outlines our recommended services based on your business objectives.
                 </p>
 
                 <div className="mb-10">
@@ -1472,7 +1473,7 @@ export default function ProposalGenerator() {
                     <div className="text-slate-500 text-sm">{proposalData.client.companyName}</div>
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-500 uppercase mb-2">FedGovWin</div>
+                    <div className="text-xs font-bold text-slate-500 uppercase mb-2">{BRAND.fullName}</div>
                     <div className="border-b border-slate-900 h-10 mb-2" />
                     <div className="font-semibold text-slate-900">Don Sean</div>
                     <div className="text-slate-500 text-sm">Principal Consultant</div>
@@ -1481,7 +1482,7 @@ export default function ProposalGenerator() {
 
                 <div className="mt-16 pt-6 border-t border-slate-200 text-center">
                   <p className="text-slate-400 text-sm">This proposal is confidential and intended solely for the named recipient.</p>
-                  <p className="text-slate-500 text-sm mt-2">FedGovWin • (813) 665-0308 • Info@FedGovWin.com • www.FedGovWin.com</p>
+                  <p className="text-slate-500 text-sm mt-2">{BRAND.fullName} • {BRAND.phone} • {BRAND.email} • www.{BRAND.domain}</p>
                 </div>
               </div>
             </div>

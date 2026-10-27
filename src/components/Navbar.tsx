@@ -57,7 +57,7 @@ export default function Navbar() {
           { label: "All Services", to: "/services", icon: Rocket, desc: "Compare everything we do" },
           { label: "Expedited Certifications", to: "/services/certifications", icon: BadgeCheck, desc: "SBA certs submitted in 14 days" },
           { label: "GSA Schedule Services", to: "/services/gsa-schedules", icon: Shield, desc: "MAS submitted in 30 days — from $5,500" },
-          { label: "Proposal Writing", to: "/services/proposal-writing", icon: PenTool, desc: "Shipley method, 87% win rate" },
+          { label: "Proposal Writing", to: "/services/proposal-writing", icon: PenTool, desc: "Shipley method, color team reviews" },
           { label: "Capture Management", to: "/services/capture-management", icon: Target, desc: "Pipeline building, 18 months early" },
           { label: "Contractor Programs", to: "/services/programs", icon: ClipboardCheck, desc: "FedStart, Growth & Prime bundles" },
         ],

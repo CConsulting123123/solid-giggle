@@ -19,16 +19,16 @@ import ContractDataExplorer from "../components/ContractDataExplorer";
 const stats = [
   { value: "7,000+", label: "Registrations Completed", icon: ClipboardCheck },
   { value: "$640M", label: "Largest Win Supported", icon: TrendingUp },
-  { value: "87%", label: "GSA Approval Rate", icon: Award },
+  { value: "98%", label: "Application Approval Rate", icon: Award },
   { value: "100%", label: "On-Time Guarantee", icon: Zap },
 ];
 
 const fiveCs = [
   { num: "1", name: "Compliance", icon: Shield, desc: "Registrations, certifications & eligibility.", color: "from-gov-blue to-gov-blue/70" },
-  { num: "2", name: "Concept", icon: Lightbulb, desc: "Strategy, positioning & materials.", color: "from-emerald-600 to-emerald-600/70" },
+  { num: "2", name: "Context", icon: Globe, desc: "Market data, positioning & materials.", color: "from-emerald-600 to-emerald-600/70" },
   { num: "3", name: "Capture", icon: Target, desc: "Finding & qualifying opportunities.", color: "from-gov-crimson to-gov-crimson/70" },
   { num: "4", name: "Compete", icon: Trophy, desc: "Proposals, pricing & reviews.", color: "from-amber-600 to-amber-600/70" },
-  { num: "5", name: "Continue", icon: Repeat, desc: "Performance, renewals & growth.", color: "from-purple-600 to-purple-600/70" },
+  { num: "5", name: "Continuity", icon: Repeat, desc: "Performance, renewals & growth.", color: "from-purple-600 to-purple-600/70" },
 ];
 
 const quickLinks = [
@@ -116,7 +116,7 @@ export default function Home() {
               <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-400">
                 <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-gov-green" /> 7,000+ registrations</span>
                 <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-gov-green" /> $640M largest win</span>
-                <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-gov-green" /> 87% GSA approval</span>
+                <span className="flex items-center gap-1.5"><CheckCircle size={14} className="text-gov-green" /> 98% application approval</span>
               </div>
             </div>
 
@@ -206,8 +206,8 @@ export default function Home() {
               </p>
               <p className="mt-4 text-slate-600 leading-relaxed">
                 Our team has completed over 7,000 registrations, supported wins up to $640M, and
-                maintains an 87% GSA and proposal approval rate. Every engagement runs on our
-                proven 5&nbsp;C's methodology.
+                maintains a 98% application approval rate across certifications and GSA submissions.
+                Every engagement runs on our proven 5&nbsp;C's methodology.
               </p>
               <Link
                 to="/about/methodology"
@@ -318,7 +318,7 @@ export default function Home() {
                 </div>
 
                 <ul className="space-y-2 mb-6 text-sm text-slate-700">
-                  <li className="flex items-center gap-2"><CheckCircle size={15} className="text-gov-green shrink-0" /> 87% approval rate</li>
+                  <li className="flex items-center gap-2"><CheckCircle size={15} className="text-gov-green shrink-0" /> 98% approval rate</li>
                   <li className="flex items-center gap-2"><CheckCircle size={15} className="text-gov-green shrink-0" /> 30-day submission guarantee</li>
                   <li className="flex items-center gap-2"><CheckCircle size={15} className="text-gov-green shrink-0" /> Ongoing contract management available</li>
                 </ul>
@@ -421,7 +421,7 @@ export default function Home() {
               </div>
               <div className="flex-1">
                 <div className="font-bold text-gov-navy">Proposal Writing That Wins</div>
-                <div className="text-sm text-slate-500">Shipley method, 87% win rate, fixed pricing</div>
+                <div className="text-sm text-slate-500">Shipley method, color team reviews, fixed pricing</div>
               </div>
               <ArrowRight size={18} className="text-slate-400 group-hover:text-gov-blue group-hover:translate-x-1 transition-all shrink-0" />
             </Link>

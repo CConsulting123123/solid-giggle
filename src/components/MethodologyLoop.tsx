@@ -54,7 +54,7 @@ const stages = [
   },
 ];
 
-export default function OurProcess() {
+export default function MethodologyLoop() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -304,8 +304,6 @@ export default function OurProcess() {
             );
           })}
         </div>
-
-        {/* Loop Indicator - Removed */}
       </div>
     </section>
   );

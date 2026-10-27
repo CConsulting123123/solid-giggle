@@ -59,8 +59,8 @@ const CAPTURE_ACTIVITIES = [
 const PIPELINE_METRICS = [
   { value: "6-18 mo", label: "Pipeline visibility ahead of RFP release" },
   { value: "3x", label: "Typical increase in qualified opportunities" },
-  { value: "70%+", label: "Target win rate on qualified captures" },
   { value: "24 hrs", label: "Opportunity qualification turnaround" },
+  { value: "6-18 mo", label: "Head start on competitors bidding cold" },
 ];
 
 const PROCESS = [

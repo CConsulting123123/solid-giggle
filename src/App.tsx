@@ -33,8 +33,10 @@ import Blog from "./routes/Blog";
 import BlogPost from "./routes/BlogPost";
 import Tools from "./routes/Tools";
 
-// Contact
+// Contact & Legal
 import Contact from "./routes/Contact";
+import Privacy from "./routes/Privacy";
+import Terms from "./routes/Terms";
 
 export default function App() {
   return (
@@ -76,6 +78,10 @@ export default function App() {
 
         {/* Contact */}
         <Route path="/contact" element={<Contact />} />
+
+        {/* Legal */}
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
 
         {/* 404 */}
         <Route path="*" element={<NotFound />} />

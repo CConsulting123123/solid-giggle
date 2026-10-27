@@ -157,9 +157,9 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About Us — FedGovWin Professional Services</title>
-        <meta name="description" content="FedGovWin provides professional federal contracting consulting — GSA Schedule, SBA certifications, proposal writing, and more." />
-        <link rel="canonical" href="https://fedgovwin.com/about" />
+        <title>About Us — Government Contracting Information</title>
+        <meta name="description" content="Meet Government Contracting Information — free guides, data and tools for small business federal contractors, plus expedited certifications, GSA Schedules, proposal writing and capture management." />
+        <link rel="canonical" href="https://govconinformation.com/about" />
       </Helmet>
 
       {/* Hero */}
@@ -171,7 +171,7 @@ export default function About() {
               Federal contracting is complex. We make it straightforward.
             </h1>
             <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-              FedGovWin exists because too many businesses leave federal contracting opportunities on the table — from unclaimed certifications to idle GSA Schedules and proposals that never win. We fix that, with disciplined strategy, expert execution, and a team that treats your federal program like a growth engine, not a compliance checkbox.
+              {BRAND.name} exists because too many small businesses leave federal contracting opportunities on the table — from unclaimed certifications to idle GSA Schedules and proposals that never win. We fix that, with free guides, real data, and expedited services built on disciplined strategy and expert execution — treating your federal program like a growth engine, not a compliance checkbox.
             </p>
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function About() {
                 <p>
                   The federal landscape shifts constantly — new regulations, platform migrations, changing
                   agency priorities — and most businesses lack the in-house expertise to stay ahead of it.
-                  That's where FedGovWin comes in: keeping your registrations current, your certifications
+                  That's where {BRAND.name} comes in: keeping your registrations current, your certifications
                   active, and your pipeline full.
                 </p>
                 <p>
@@ -204,7 +204,7 @@ export default function About() {
                   foundation of everything we deliver.
                 </p>
                 <p>
-                  Today, FedGovWin manages the full federal contracting journey — from initial eligibility
+                  Today, we manage the full federal contracting journey — from initial eligibility
                   through multi-year contract growth — so you can focus on delivering results.
                 </p>
               </div>

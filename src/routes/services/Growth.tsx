@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { cn } from "../../components/cn";
 import { LinkButton } from "../../components/Button";
-import { LINKS } from "../../lib/constants";
+import { BRAND, LINKS } from "../../lib/constants";
 
 // ============================================
 // GROWTH PROGRAM PAGE
@@ -176,10 +176,10 @@ const timeline = [
 
 const fiveCsCoverage = [
   { c: 'Compliance', level: 'Full', covered: true, desc: 'All registrations, certifications, and 6-month compliance updates' },
-  { c: 'Concept', level: 'Full', covered: true, desc: 'Capabilities statement, marketing strategy, and campaign execution' },
+  { c: 'Context', level: 'Full', covered: true, desc: 'Capabilities statement, marketing strategy, and campaign execution' },
   { c: 'Capture', level: 'Full', covered: true, desc: 'Portal access, daily alerts, and opportunity qualification support' },
   { c: 'Compete', level: 'Reviews', covered: 'partial', desc: 'Unlimited Gold Team proposal reviews' },
-  { c: 'Continue', level: '—', covered: false, desc: 'Available in Prime program' },
+  { c: 'Continuity', level: '—', covered: false, desc: 'Available in Prime program' },
 ];
 
 const whyGrowth = [
@@ -244,7 +244,7 @@ export default function GrowthProgram() {
   return (
     <>
       <Helmet>
-        <title>Growth Program — Scale Your Federal Pipeline | FedGovWin Professional Services</title>
+        <title>Growth Program — Scale Your Federal Pipeline | Government Contracting Information</title>
         <meta name="description" content="Build a real federal contract pipeline. 2,200+ bid sources, marketing campaigns, unlimited proposal reviews, and opportunity qualification. $6,500." />
       </Helmet>
 
@@ -265,7 +265,7 @@ export default function GrowthProgram() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-500/20 text-sm text-rose-200 mb-6 border border-rose-400/30">
                 <BarChart3 size={16} />
-                Marketing Program
+                6-Month Pipeline Program
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
@@ -284,7 +284,7 @@ export default function GrowthProgram() {
                   <div className="text-5xl font-bold text-white">$6,500</div>
                   <div className="text-rose-300">6 Month Program</div>
                 </div>
-                <LinkButton href="/register" className="px-8 py-4 bg-white text-rose-900 hover:bg-rose-50 text-lg">
+                <LinkButton href={LINKS.booking} target="_blank" rel="noreferrer" className="px-8 py-4 bg-white text-rose-900 hover:bg-rose-50 text-lg">
                   Get Started
                   <ArrowRight size={20} className="ml-2" />
                 </LinkButton>
@@ -601,7 +601,7 @@ export default function GrowthProgram() {
                 Want dedicated capture management and full proposal writing? Upgrade to Prime. Your <strong>full $6,500 Growth investment</strong> applies as credit — you're building on your momentum.
               </p>
               <div className="flex items-center gap-4">
-                <LinkButton href="/programs/prime" className="bg-amber-600 text-white hover:bg-amber-700">
+                <LinkButton href="/services/programs/prime" className="bg-amber-600 text-white hover:bg-amber-700">
                   Learn About Prime
                   <ChevronRight size={18} className="ml-1" />
                 </LinkButton>
@@ -649,7 +649,7 @@ export default function GrowthProgram() {
           <p className="mt-4 text-xl text-rose-200">Tools, campaigns, and support to start winning.</p>
           
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <LinkButton href="/register" className="px-10 py-4 bg-white text-rose-900 hover:bg-rose-50 text-lg">
+            <LinkButton href={LINKS.booking} target="_blank" rel="noreferrer" className="px-10 py-4 bg-white text-rose-900 hover:bg-rose-50 text-lg">
               Start Growth — $6,500
               <ArrowRight size={20} className="ml-2" />
             </LinkButton>
@@ -663,9 +663,9 @@ export default function GrowthProgram() {
               <Phone size={18} />
               (813) 665-0308
             </a>
-            <a href="mailto:Info@FedGovWin.com" className="flex items-center gap-2 hover:text-white transition">
+            <a href={`mailto:${BRAND.email}`} className="flex items-center gap-2 hover:text-white transition">
               <Mail size={18} />
-              Info@FedGovWin.com
+              {BRAND.email}
             </a>
           </div>
         </div>

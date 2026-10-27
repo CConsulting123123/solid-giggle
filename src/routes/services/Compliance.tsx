@@ -24,7 +24,7 @@ import {
 import Section from "../../components/Section";
 import Card from "../../components/Card";
 import { LinkButton } from "../../components/Button";
-import { LINKS } from "../../lib/constants";
+import { BRAND, LINKS } from "../../lib/constants";
 import { cn } from "../../components/cn";
 
 const registrations = [
@@ -91,7 +91,7 @@ const certifications = [
     code: "8(a)", 
     name: "8(a) Business Development", 
     agency: "SBA",
-    benefit: "Sole-source contracts up to $4M (goods) / $7M (services)",
+    benefit: "Sole-source contracts up to $4.5M (services) / $7M (manufacturing)",
     timeline: "90-180 days",
     requirements: ["Socially & economically disadvantaged", "51% owned by qualifying individuals", "Under $16.5M average revenue"]
   },
@@ -180,7 +180,7 @@ export default function ServicesCertifications() {
   return (
     <>
       <Helmet>
-        <title>Certifications & Compliance — FedGovWin Professional Services</title>
+        <title>Certifications & Compliance — Government Contracting Information</title>
         <meta name="description" content="SBA certifications, SAM.gov registration, and compliance management. Get certified and stay compliant with our expert support." />
       </Helmet>
 
@@ -209,12 +209,12 @@ export default function ServicesCertifications() {
               
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
-                  <div className="font-display text-3xl font-bold text-gov-crimson">2,500+</div>
-                  <div className="text-sm text-slate-700 mt-1">Registrations Managed</div>
+                  <div className="font-display text-3xl font-bold text-gov-crimson">7,000+</div>
+                  <div className="text-sm text-slate-700 mt-1">Registrations Completed</div>
                 </div>
                 <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
-                  <div className="font-display text-3xl font-bold text-gov-crimson">$50M+</div>
-                  <div className="text-sm text-slate-700 mt-1">Contracts Captured</div>
+                  <div className="font-display text-3xl font-bold text-gov-crimson">$640M</div>
+                  <div className="text-sm text-slate-700 mt-1">Largest Win Supported</div>
                 </div>
               </div>
 
@@ -669,7 +669,7 @@ export default function ServicesCertifications() {
                 </div>
                 <div className="flex items-center gap-2 text-slate-300">
                   <Mail size={16} />
-                  Info@FedGovWin.com
+                  {BRAND.email}
                 </div>
                 <div className="flex items-center gap-2 text-slate-300">
                   <Calendar size={16} />

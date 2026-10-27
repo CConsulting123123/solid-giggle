@@ -9,7 +9,7 @@ import {
 import Section from "../../components/Section";
 import Card from "../../components/Card";
 import { LinkButton } from "../../components/Button";
-import { LINKS } from "../../lib/constants";
+import { BRAND, LINKS } from "../../lib/constants";
 import { cn } from "../../components/cn";
 
 const colorTeams = [
@@ -253,9 +253,9 @@ const faq = [
 ];
 
 const stats = [
-  { value: "87%", label: "Client Win Rate", sublabel: "vs 30% industry average" },
   { value: "500+", label: "Proposals Written", sublabel: "since 2010" },
   { value: "$50M+", label: "Contracts Won", sublabel: "for our clients" },
+  { value: "15+", label: "Years of Experience", sublabel: "in federal proposals" },
   { value: "48hr", label: "Quote Turnaround", sublabel: "RFP to proposal scope" }
 ];
 
@@ -271,7 +271,7 @@ export default function ServicesProposalWriting() {
   return (
     <>
       <Helmet>
-        <title>Proposal Writing — FedGovWin Professional Services</title>
+        <title>Proposal Writing Services — Government Contracting Information</title>
         <meta name="description" content="Professional government proposal writing services using the Shipley method tailored to your business. Full development, Red Team reviews, and past performance support." />
       </Helmet>
 
@@ -750,7 +750,7 @@ export default function ServicesProposalWriting() {
             </Card>
 
             <Card className="p-6 border-l-4 border-l-gov-crimson bg-white" hover={false}>
-              <div className="text-xs font-bold uppercase tracking-wider text-gov-crimson mb-3">FedGovWin</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-gov-crimson mb-3">Why {BRAND.shortName}</div>
               <ul className="space-y-3">
                 {[
                   "Senior writers with evaluation experience",
@@ -857,7 +857,7 @@ export default function ServicesProposalWriting() {
         <div className="mt-8 text-center">
           <p className="text-slate-400">
             Questions? Call <a href="tel:8136650308" className="text-white hover:underline">(813) 665-0308</a> or 
-            email <a href="mailto:Info@FedGovWin.com" className="text-white hover:underline">Info@FedGovWin.com</a>
+            email <a href={`mailto:${BRAND.email}`} className="text-white hover:underline">{BRAND.email}</a>
           </p>
         </div>
       </Section>

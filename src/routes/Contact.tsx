@@ -53,9 +53,9 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Us — FedGovWin Professional Services</title>
-        <meta name="description" content="Contact FedGovWin for expert federal contracting consulting — GSA Schedule, certifications, proposal writing, and more. Get a free readiness assessment." />
-        <link rel="canonical" href="https://fedgovwin.com/contact" />
+        <title>Contact Us — Government Contracting Information</title>
+        <meta name="description" content="Contact Government Contracting Information for federal contracting guidance — certifications, GSA Schedules, proposal writing, capture management, and more. Free consultation available." />
+        <link rel="canonical" href="https://govconinformation.com/contact" />
       </Helmet>
 
       {/* Hero */}

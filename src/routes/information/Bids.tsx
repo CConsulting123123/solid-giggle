@@ -37,7 +37,7 @@ const samNotificationTypes = [
     description: "Formal solicitation for a competitive bid. Agencies post detailed requirements and evaluation criteria.",
     characteristics: ["Competitive bidding required", "Detailed specifications provided", "Detailed evaluation criteria", "Multiple pages of requirements"],
     timeline: "15-30 days average response time",
-    winRate: "8-15% win rate if qualified",
+    winRate: "Open competition — strongest proposals win",
     howToPrepare: "Respond to every requirement, use the same language, include past performance examples",
   },
   {
@@ -46,7 +46,7 @@ const samNotificationTypes = [
     description: "Quick procurement for services/products under $250k. Less formal than RFP.",
     characteristics: ["Simplified process", "Typically GSA eBuy", "Fast turnaround (3-5 days)", "Pricing-focused"],
     timeline: "3-5 days average response time",
-    winRate: "20-25% win rate if qualified",
+    winRate: "Fastest turnaround — speed and price matter",
     howToPrepare: "Fast response critical. Have pricing ready. Keep response brief and clear.",
   },
   {
@@ -55,7 +55,7 @@ const samNotificationTypes = [
     description: "A blanket contract with an agency. You compete for a spot on the contract, then agencies order from you.",
     characteristics: ["Multi-year base + options", "Estimated spending (not guaranteed)", "Task Orders issued under the contract", "Can lead to $50M+ in awards"],
     timeline: "30-45 days to award",
-    winRate: "12-20% depends on competition",
+    winRate: "Competitive pool — scope breadth matters",
     howToPrepare: "Understand the IDIQ vehicle. Show capability across the full scope. Highlight relevant past performance.",
   },
   {
@@ -73,7 +73,7 @@ const samNotificationTypes = [
     description: "Sole-source procurement. Government is buying from one contractor without competition.",
     characteristics: ["No bidding - you're selected", "Government must justify why", "Often extended incumbents", "Sometimes available to set-asides"],
     timeline: "20-30 days to award",
-    winRate: "80-95% if you're selected",
+    winRate: "Not competitive — you're already selected",
     howToPrepare: "Build relationships with agencies. Have done business with them before. Understand their mission.",
   },
   {
@@ -203,7 +203,7 @@ export default function InformationBids() {
   return (
     <>
       <Helmet>
-        <title>Finding Government Bids — FedGovWin Professional Services</title>
+        <title>Finding Government Bids — Government Contracting Information</title>
       </Helmet>
 
       {/* Hero */}
@@ -294,8 +294,8 @@ export default function InformationBids() {
 
                 <div className="flex items-center gap-4 p-3 bg-slate-50 rounded-lg">
                   <div>
-                    <div className="text-xs text-slate-500 font-semibold">Win Rate</div>
-                    <div className="text-lg font-bold text-gov-navy">{notif.winRate}</div>
+                    <div className="text-xs text-slate-500 font-semibold">Competitive Context</div>
+                    <div className="text-sm font-bold text-gov-navy">{notif.winRate}</div>
                   </div>
                 </div>
 

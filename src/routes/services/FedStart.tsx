@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { cn } from "../../components/cn";
 import { LinkButton } from "../../components/Button";
-import { LINKS } from "../../lib/constants";
+import { BRAND, LINKS } from "../../lib/constants";
 
 // ============================================
 // FEDSTART PROGRAM PAGE
@@ -169,10 +169,10 @@ const timeline = [
 
 const fiveCsCoverage = [
   { c: 'Compliance', level: 'Full', covered: true, desc: 'All registrations, certifications, and compliance requirements' },
-  { c: 'Concept', level: 'Foundation', covered: true, desc: 'Capabilities statement, marketing strategy, and contact lists' },
+  { c: 'Context', level: 'Foundation', covered: true, desc: 'Capabilities statement, marketing strategy, and contact lists' },
   { c: 'Capture', level: '—', covered: false, desc: 'Available in Growth program' },
   { c: 'Compete', level: '1 Review', covered: 'partial', desc: 'One RFP review included' },
-  { c: 'Continue', level: '—', covered: false, desc: 'Available in Prime program' },
+  { c: 'Continuity', level: '—', covered: false, desc: 'Available in Prime program' },
 ];
 
 const whyFedStart = [
@@ -219,7 +219,7 @@ export default function FedStartProgram() {
   return (
     <>
       <Helmet>
-        <title>FedStart Program — Your Federal Contractor Foundation | FedGovWin Professional Services</title>
+        <title>FedStart Program — Your Federal Contractor Foundation | Government Contracting Information</title>
         <meta name="description" content="Launch your federal contracting business in 30 days. SAM.gov registration, SBA certifications, capabilities statement, and marketing foundation. $3,200." />
       </Helmet>
 
@@ -235,7 +235,7 @@ export default function FedStartProgram() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/20 text-sm text-blue-200 mb-6 border border-blue-400/30">
                 <Rocket size={16} />
-                Marketing Program
+                3-Month Foundation Program
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
@@ -254,7 +254,7 @@ export default function FedStartProgram() {
                   <div className="text-5xl font-bold text-white">$3,200</div>
                   <div className="text-blue-300">3 Month Program</div>
                 </div>
-                <LinkButton href="/register" className="px-8 py-4 bg-white text-blue-900 hover:bg-blue-50 text-lg">
+                <LinkButton href={LINKS.booking} target="_blank" rel="noreferrer" className="px-8 py-4 bg-white text-blue-900 hover:bg-blue-50 text-lg">
                   Get Started
                   <ArrowRight size={20} className="ml-2" />
                 </LinkButton>
@@ -526,7 +526,7 @@ export default function FedStartProgram() {
                 When you're ready to actively pursue opportunities, upgrade to Growth. Your <strong>full $3,200 FedStart investment</strong> applies as credit — so you're not starting over, you're building on your foundation.
               </p>
               <div className="flex items-center gap-4">
-                <LinkButton href="/programs/growth" className="bg-emerald-600 text-white hover:bg-emerald-700">
+                <LinkButton href="/services/programs/growth" className="bg-emerald-600 text-white hover:bg-emerald-700">
                   Learn About Growth
                   <ChevronRight size={18} className="ml-1" />
                 </LinkButton>
@@ -574,7 +574,7 @@ export default function FedStartProgram() {
           <p className="mt-4 text-xl text-blue-200">Get compliant, get visible, get winning.</p>
           
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <LinkButton href="/register" className="px-10 py-4 bg-white text-blue-900 hover:bg-blue-50 text-lg">
+            <LinkButton href={LINKS.booking} target="_blank" rel="noreferrer" className="px-10 py-4 bg-white text-blue-900 hover:bg-blue-50 text-lg">
               Start FedStart — $3,200
               <ArrowRight size={20} className="ml-2" />
             </LinkButton>
@@ -588,9 +588,9 @@ export default function FedStartProgram() {
               <Phone size={18} />
               (813) 665-0308
             </a>
-            <a href="mailto:Info@FedGovWin.com" className="flex items-center gap-2 hover:text-white transition">
+            <a href={`mailto:${BRAND.email}`} className="flex items-center gap-2 hover:text-white transition">
               <Mail size={18} />
-              Info@FedGovWin.com
+              {BRAND.email}
             </a>
           </div>
         </div>

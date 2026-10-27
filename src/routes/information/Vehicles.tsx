@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, ExternalLink, AlertCircle } from "lucide-react
 import Section from "../../components/Section";
 import Card from "../../components/Card";
 import { LinkButton } from "../../components/Button";
-import { LINKS } from "../../lib/constants";
+import { BRAND, LINKS } from "../../lib/constants";
 
 const vehicles = [
   {
@@ -40,7 +40,9 @@ export default function InformationVehicles() {
   return (
     <>
       <Helmet>
-        <title>Contract Vehicles 101 — FedGovWin Professional Services</title>
+        <title>Contract Vehicles 101 — Government Contracting Information</title>
+        <meta name="description" content="GSA MAS, OASIS+, SEWP, CIO-SP4 explained: how federal contract vehicles work, which one fits your business, and how to get on them." />
+        <link rel="canonical" href={`https://${BRAND.domain}/information/contract-vehicles`} />
       </Helmet>
 
       {/* Hero */}
@@ -145,6 +147,55 @@ export default function InformationVehicles() {
             </Card>
           ))}
         </div>
+      </Section>
+
+      {/* Which vehicle for you */}
+      <Section
+        title="Which Vehicle Fits Your Business?"
+        kicker="Decision Guide"
+        subtitle="Don't chase every vehicle — each has an application cost in time and fees. Pick based on what you sell and who buys it."
+        className="bg-slate-50"
+      >
+        <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-slate-200 bg-slate-50 text-left">
+                <th className="p-4 font-semibold text-gov-navy">If you sell…</th>
+                <th className="p-4 font-semibold text-gov-navy">Start with</th>
+                <th className="p-4 font-semibold text-gov-navy">Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Products / commodities", "GSA MAS", "Agencies buy products fastest through Schedule holders"],
+                ["IT products & services", "SEWP or GSA MAS IT", "NASA SEWP has huge IT volume and fast ordering"],
+                ["Complex professional services", "OASIS+", "Best-in-Class for management/consulting/engineering services"],
+                ["Health IT", "CIO-SP4", "NIH vehicle serving HHS and health-focused agencies"],
+                ["Multiple service lines", "GSA MAS", "Broadest reach — start here, expand to others later"],
+              ].map((row) => (
+                <tr key={row[0]} className="border-b border-slate-100 last:border-0">
+                  <td className="p-4 font-medium text-slate-800">{row[0]}</td>
+                  <td className="p-4">
+                    <span className="rounded-md bg-gov-blue/10 px-2 py-1 font-semibold text-gov-blue">{row[1]}</span>
+                  </td>
+                  <td className="p-4 text-slate-600">{row[2]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <Card className="mt-6 p-5 bg-amber-50 border-amber-200" hover={false}>
+          <div className="flex items-start gap-3">
+            <AlertCircle size={18} className="text-amber-600 shrink-0 mt-0.5" />
+            <p className="text-sm text-slate-700 leading-relaxed">
+              <span className="font-semibold">Reality check:</span> a vehicle is a license to hunt,
+              not a guarantee of orders. Roughly half of Schedule holders never sell anything
+              because they get the contract and stop marketing. Getting on the vehicle is step one —
+              agencies still have to know you exist. Our <a href="/information/search-contracts" className="text-gov-blue font-semibold hover:underline">award data tool</a> shows you which agencies actually buy through each vehicle.
+            </p>
+          </div>
+        </Card>
       </Section>
 
       {/* GSA Focus */}

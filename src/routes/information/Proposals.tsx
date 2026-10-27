@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, FileText, CheckCircle, AlertTriangle } from "lucide-react";
+import { ArrowRight, FileText, CheckCircle, AlertTriangle, ListChecks } from "lucide-react";
 import Section from "../../components/Section";
 import Card from "../../components/Card";
 import { LinkButton } from "../../components/Button";
-import { LINKS } from "../../lib/constants";
+import { BRAND, LINKS } from "../../lib/constants";
 
 const colorTeams = [
   { name: "Blue Team", phase: "Strategy & Outline", color: "bg-blue-600", desc: "Reviews outline, win themes, and solution strategy before writing starts." },
@@ -16,7 +16,9 @@ export default function InformationProposals() {
   return (
     <>
       <Helmet>
-        <title>Writing Proposals 101 — FedGovWin Professional Services</title>
+        <title>Writing Proposals 101 — Government Contracting Information</title>
+        <meta name="description" content="How to write winning government proposals: compliance matrices, Shipley color team reviews, proposal structure, and the mistakes that get proposals disqualified." />
+        <link rel="canonical" href={`https://${BRAND.domain}/information/writing-proposals`} />
       </Helmet>
 
       {/* Hero */}
@@ -31,6 +33,53 @@ export default function InformationProposals() {
               Winning proposals aren't just well-written — they're compliant and structured. 
               Learn the Shipley method that professional proposal teams use.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Matrix */}
+      <section className="bg-white py-16">
+        <div className="mx-auto w-full max-w-7xl px-5 lg:px-8">
+          <p className="text-sm font-bold uppercase tracking-wider text-gov-blue">Start Here</p>
+          <h2 className="mt-3 font-display text-2xl font-bold text-gov-navy">
+            The Compliance Matrix: Your First (and Most Important) Task
+          </h2>
+          <p className="mt-3 text-slate-600 max-w-2xl">
+            Before writing a single word, extract every requirement from the RFP into a matrix.
+            Proposals are disqualified for missing requirements far more often than for weak writing.
+          </p>
+
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            <div className="space-y-3">
+              {[
+                { t: "Section L instructions", d: "Exactly how the proposal must be formatted, organized, and submitted" },
+                { t: "Section M evaluation criteria", d: "How the government will score you — write to these weights" },
+                { t: "Every 'shall' and 'must'", d: "Each numbered requirement gets its own matrix row and a planned response location" },
+                { t: "Page limits & formatting", d: "Font, margins, page counts — violations can void your proposal" },
+                { t: "Attachments & forms", d: "Reps & certs, PPQs, acknowledgments of amendments — all of them" },
+              ].map((row) => (
+                <div key={row.t} className="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                  <ListChecks size={18} className="text-gov-blue shrink-0 mt-0.5" />
+                  <div>
+                    <div className="font-semibold text-gov-navy text-sm">{row.t}</div>
+                    <div className="text-xs text-slate-600 mt-0.5 leading-relaxed">{row.d}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <Card className="p-6 bg-gov-navy text-white" hover={false}>
+              <h3 className="font-display text-lg font-bold">Why evaluators love compliance</h3>
+              <p className="mt-3 text-sm text-slate-300 leading-relaxed">
+                Evaluators score against a checklist. When they can find your response to each
+                requirement quickly — clearly labeled, in the section they expect — you score
+                higher on the same content. Compliance isn't busywork; it's how the game is scored.
+              </p>
+              <div className="mt-5 rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200">
+                <span className="text-gov-gold font-semibold">Rule of thumb:</span> if the evaluator
+                has to hunt for your answer, you've already lost points.
+              </div>
+            </Card>
           </div>
         </div>
       </section>
